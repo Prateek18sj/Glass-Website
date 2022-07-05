@@ -1,0 +1,279 @@
+/* NOTE: Zoom in Zoom out karne par bekar behave kar rhi h website.
+That I have to learn how to fix... */
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+h1{
+  color: #426696;
+  font-weight: 600;
+  font-size: 3rem;
+  opacity: 0.8;
+}
+
+h2, p{
+  color: #658ec6;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+h3{
+  color: #426696;
+  font-weight: bolder;
+  opacity: 0.8;
+}
+
+main{
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glass{
+  background: white;
+  height: 78vh;
+  width: 900px;
+  background: linear-gradient(to right bottom,
+    rgba(255, 255, 255,0.7), rgba(255, 255, 255, 0.3));
+  border-radius: 2rem;
+  z-index: 3;
+  /* NOTE: z-index pushes the thing out... the more the z-index, the more outside pushed
+  element will be. */
+  backdrop-filter: blur(.5rem);
+  display: flex;
+}
+
+.circle1, .circle2{
+  background: white;
+  height: 14rem;
+  width: 14rem;
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(to right bottom,
+    rgba(255, 255, 255,0.7), rgba(255, 255, 255, 0.4));
+}
+
+.circle1{
+  top: 3%;
+  right: 15%;
+}
+
+.circle2{
+  bottom: 3%;
+  left: 14%;
+}
+
+.dashboard{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background: linear-gradient(to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3));
+  border-radius: 2rem;
+}
+
+.user img{
+  width: auto;
+  height: 65px;
+}
+
+.user{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  bottom: 15px;
+}
+
+.user h3{
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.user p{
+  font-size: 11px;
+}
+
+.link{
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-top: 2rem;
+  align-items: center;
+  position: relative;
+  bottom: 30px;
+}
+
+.link h2{
+  padding: 0 2rem;
+  font-size: 17px;
+}
+
+.link img{
+  width: auto;
+  height: 28px;
+}
+
+.games{
+  flex:2;
+}
+
+.pro{
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  border-radius: 2rem;
+  padding: 1rem;
+  display: flex;
+  position: relative;
+  width: 75%;
+  height: 17%;
+}
+
+.pro h2{
+  font-size: 17px;
+  color: white;
+  width: 40%;
+  font-weight: 800;
+  opacity: 1;
+  position: relative;
+  left: 10px;
+  bottom: 2px;
+}
+
+.pro img{
+  height: 100px;
+  position: relative;
+  left: 18px;
+  bottom: 25px;
+}
+
+/* WARNING: Games portion started;. */
+.status{
+  margin-bottom: 3rem;
+}
+
+.status input{
+  background: linear-gradient(to right bottom,
+  rgba(255, 255, 255, 0.7),
+  rgba(255, 255, 255, 0.3));
+  border: none;
+  border-radius: 2rem;
+  width: 60%;
+  }
+
+  .status h1{
+    font-size: 35px;
+    font-weight: 800;
+  }
+
+  .games{
+    margin-top: 1rem;
+    /* margin-left: 5rem; */
+    margin-right: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    left: 65px;
+    /* top: 85px; */
+  }
+
+  .card{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    background: linear-gradient(
+      to left top,
+      rgba(255, 255, 255,0.8),
+      rgba(255, 255, 255, 0.5)
+      );
+      border-radius: 1rem;
+      width: 500px;
+      height: 115px;
+      padding: 10px;
+
+  }
+
+  .card-info{
+    position: relative;
+    top: 3px;
+    right: 8px;
+    margin: 15px;
+  }
+
+  .card-info p{
+    font-size: 11px;
+  }
+
+  .card img{
+    width: auto;
+    height: 65px;
+    position: relative;
+    top: 15px;
+    left: 10px;
+  }
+
+  .progress{
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    width: 100%;
+    height: 25%;
+    border-radius: .5rem;
+    position: relative;
+    overflow: hidden;
+    margin-top: 12px;
+  }
+
+  .progress::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgb(236, 236, 236);
+    position: absolute;
+    left: 60%;
+  }
+
+  .percentage{
+    font-weight: bold;
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    position: relative;
+    top: 20px;
+    right: 10px;
+  }
+
+
+  /* .card{
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(
+      to left top,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.5)
+    );
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+    border-radius: 1rem;
+    margin: 2rem;
+    width: 500px;
+  } */
+
+  /* .card-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  } */
